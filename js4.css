@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eef1f6;
+  color: #222222;
+}
+
+header {
+  background-color: #5a3e8f;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0 0;
+}
+
+#month {
+  background-color: #29b894;
+  color: #222222;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+main {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background-color: white;
+  border-left: 6px solid #29b894;
+  padding: 15px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.stat span {
+  display: block;
+  font-size: 13px;
+  color: #666666;
+}
+
+.stat strong {
+  display: block;
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.stat small {
+  color: #888888;
+}
+
+.panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input,
+select,
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+#search {
+  flex: 1;
+}
+
+button {
+  background-color: #5a3e8f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #432d6e;
+}
+
+.light {
+  background-color: #eeeeee;
+  color: #222222;
+}
+
+.light:hover {
+  background-color: #dddddd;
+}
+
+.danger {
+  background-color: #d64545;
+}
+
+.danger:hover {
+  background-color: #b33333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  background-color: #eef1f6;
+}
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: #e6e6e6;
+}
+
+.Food {
+  background-color: #d5f4ea;
+}
+
+.Travel {
+  background-color: #d6e8ff;
+}
+
+.Shopping {
+  background-color: #e8dcfa;
+}
+
+.delete {
+  background-color: #fde4e4;
+  color: #d64545;
+}
+
+.delete:hover {
+  background-color: #f9c9c9;
+}
+
+.warning {
+  background-color: #fff0d6;
+  border-left: 5px solid #e59a1a;
+  padding: 10px;
+}
+
+#errors {
+  color: #d64545;
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  color: #777777;
+}
+
+
+.hidden {
+  display: none;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expensely</title>
+  <link rel="stylesheet" href="js4.css">
+</head>
+<body>
+  <header>
+    <div><h1>Expensely</h1><p>Track what you spend. Stay inside your budget.</p></div>
+    <span id="month"></span>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat"><span>Spent this month</span><strong id="spent">₹0</strong></div>
+      <div class="stat"><span>Expenses this month</span><strong id="count">0</strong></div>
+      <div class="stat"><span>Budget left</span><strong id="left">₹0</strong></div>
+      <div class="stat"><span>Spent in USD</span><strong id="usd">--</strong><small id="rate">Loading rate...</small></div>
+    </section>
+
+    <section class="panel">
+      <h2>Monthly budget</h2>
+      <form id="budgetForm" class="row">
+        <input type="number" id="budget" placeholder="e.g. 10000" min="0">
+        <button>Save budget</button>
+      </form>
+      <p id="warning" class="warning hidden"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Add an expense</h2>
+      <form id="expenseForm" class="row" novalidate>
+        <input id="name" placeholder="Name (e.g. Groceries)">
+        <input type="number" id="amount" placeholder="Amount (₹)">
+        <select id="category">
+          <option value="">Choose category</option>
+          <option>Food</option><option>Travel</option><option>Shopping</option><option>Other</option>
+        </select>
+        <input type="date" id="date">
+        <button>Add expense</button>
+      </form>
+      <ul id="errors"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Your expenses</h2>
+      <div class="row">
+        <input type="search" id="search" placeholder="Search by name">
+        <select id="filter">
+          <option value="All">All categories</option>
+          <option>Food</option><option>Travel</option><option>Shopping</option><option>Other</option>
+        </select>
+        <select id="sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+        <button id="exportBtn" class="light">Export JSON</button>
+        <button id="importBtn" class="light">Import JSON</button>
+        <button id="clearBtn" class="danger">Clear all</button>
+        <input type="file" id="file" accept=".json" hidden>
+      </div>
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Amount</th><th>Category</th><th>Date</th><th></th></tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+      <p id="empty" class="empty hidden">No expenses to show.</p>
+    </section>
+  </main>
+
+  <script type="module" src="js4.js"></script>
+</body>
+</html>
